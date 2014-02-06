@@ -1,0 +1,84 @@
+/* _base.scss - Base rules are the reset elements for all browsers,
+ * and the settings of headings sizes,
+ * default link styles, 
+ * default fonts styles and body backgrounds...
+ *
+ * Please verify that this file is correctly import into screen.scss,
+ * the initializer file... (or equivalent):
+ * @import "_base.scss"; */
+
+/* 
+ * __ELEMENTS
+/*
+*/
+  html {
+    font-size: 16px; // taille de base;
+  }
+
+  body {
+    font-family: $typo;
+    font-size: 62.5%; // 1em = 10px; en fonction de la taille de base;
+    line-height: 1.4;
+    padding-top: 20px;
+    background: #FAFAFA;
+  }
+
+  strong { 
+    font-family: $typo;
+    font-weight: 600;
+  }
+
+  h1, .h1, 
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font-family: $typo-heading;
+    font-weight: 600;
+    color: $text-color;
+  }
+
+  h1, .h1 {
+    font-size: 3.8em;
+    line-height: 1;
+  }
+
+  h2, .h2 {
+    font-size: 3em;
+    line-height: 1.5;
+  }
+
+  h3, .h3 {
+    font-size: 2.4em;
+    line-height: 1.5;
+  }
+
+  h5, .h5 {
+    font-size: 1.4em;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    -webkit-transition-property: background-color, color, border;
+    -webkit-transition-duration: 200ms;
+    font-family: $typo;
+    font-weight: 400;
+    font-size: 1em;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    color: $contrast-color;
+    &:hover {
+      border-bottom: 1px solid $contrast-color; 
+      cursor: pointer; 
+      text-decoration: none;
+      color: $contrast-color;
+    }
+  }
